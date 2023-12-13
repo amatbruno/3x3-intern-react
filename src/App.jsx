@@ -12,7 +12,10 @@ function App() {
                     <a href=""><li>TICKETS</li></a>
                     <a href=""><li>GALLERY</li></a>
                     <a href=""><li>CONTACT</li></a>
+                    <input type="checkbox" name="toggle" class="mobileToggle" id="toggle" checked/>
+                    <label for="toggle"></label>
                     <a href=""><img id='login-img' src="/src/assets/login.png" alt="user-log"/></a>
+                    
                 </nav>
             </header>
             <div className="Video">
@@ -29,7 +32,7 @@ function App() {
                 having fun with a lot of activities!"/>
                 <Card title="GALLERY" text="See the latest winners from older editions and the
                 chronicles of every final and semifinal"/>
-                <Card title="" text=""/>
+                <Card title="" text="" />
             </div>
         </div>
     )
