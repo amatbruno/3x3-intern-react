@@ -24,7 +24,6 @@ header {
   overflow: hidden;
   top: 0;
   padding: 0;
-  border: white solid 1px;
   margin: auto;
 }
 
@@ -39,11 +38,27 @@ li {
 
 a {
   font-weight: 600;
-  color: #ff8864;
+  color: white;
   text-decoration: inherit;
   margin: auto;
   font-size: 20px;
 }
 a:hover {
   color: #ff8864b4;
+}
+#login-img {
+  width: 40px
+}
+#login-img:hover {
+  background-image: url(https://iconos8.es/icon/98957/usuario);
+}
+
+.Video img {
+  width: 100%;
+}
+.Video h1 {
+  font-size: 60px;
+  width: 100%;
+  letter-spacing: 6px;
+  text-align: center;
 }
