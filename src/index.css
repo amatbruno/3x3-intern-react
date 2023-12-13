@@ -13,11 +13,36 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  top: 0;
+  padding: 0;
+  border: white solid 1px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  padding: 25px;
+}
 
 a {
-  font-weight: 500;
+  font-weight: 600;
   color: #ff8864;
   text-decoration: inherit;
+  margin: auto;
+  font-size: 20px;
 }
 a:hover {
   color: #ff8864b4;
