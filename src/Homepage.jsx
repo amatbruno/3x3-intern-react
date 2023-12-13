@@ -9,12 +9,12 @@ function Homepage() {
   return (
     <>
       <header>
-        <h1>Buenas</h1>
+        <h1>3X3 INTERN - BARCELONA</h1>
       </header>
 
       <main>
-        <div>
-          Esto es mi projecto de react
+        <div className="intro-video">
+
         </div>
       </main>
 
@@ -22,4 +22,4 @@ function Homepage() {
   )
 }
 
-export default App
+export default Homepage
