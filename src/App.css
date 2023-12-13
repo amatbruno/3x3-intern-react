@@ -1,7 +1,61 @@
 .container {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr;
     gap: 50px;
     margin: auto;
-    justify-content: center;
+}
+
+header {
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    padding: 0;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    padding: 25px;
+}
+
+a {
+    font-weight: 600;
+    color: white;
+    text-decoration: inherit;
+    margin: auto;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #ff8864b4;
+}
+
+#login-img {
+    width: 40px;
+}
+
+#login-img:hover {
+    width: 40px;
+    /* background-image: url("/src/assets/login.png"); */
+}
+
+.Video img {
+    width: 100%;
+}
+
+.Video h1 {
+    font-size: 60px;
+    width: 100%;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+hr {
+    width: 50%;
+    margin-bottom: 60px;
 }

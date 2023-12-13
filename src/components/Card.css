@@ -1,23 +1,35 @@
-
-
 .Card {
-    width: 250;
+    width: 68%;
     border: 1px #949494 solid;
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
+    margin-bottom: 20px;
 }
+
+.Card:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.Card:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+}
+
 .Card:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     cursor: pointer;
     color: #ff8864b4;
+
     #tit {
         text-decoration: underline;
     }
 }
+
 .Card img {
-    width: 50%;
+    width: 30%;
 }
 .Card h2 {
     font-size: 40px;
@@ -29,5 +41,5 @@
 .elements {
     display: inline-block;
     margin-left: 50px;
-    width: 75%;
+    width: 45%;
 }
