@@ -1,0 +1,11 @@
+.Card {
+    width: 400px;
+    border: 1px white solid;
+    display: flex;
+    align-items: center;
+}
+
+.elements {
+    display: inline-block;
+    margin-left: 20px;
+}
