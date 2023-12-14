@@ -2,6 +2,9 @@ import React from 'react'
 import "./Card.css"
 
 function Card(props) {
+
+
+
     return (
             <div className='Card'>
                 <img src="/src/assets/tickets.png" alt="two-tickets" />

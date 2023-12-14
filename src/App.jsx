@@ -1,27 +1,20 @@
 import './App.css';
 import Card from './components/Card';
+import Video from './components/Video';
+import Header from './components/Header';
+
 
 
 function App() {
+    
+
+
     return (
         <div className="App">
-            <header>
-                <nav>
-                    <a href=""><li>HOME</li></a>
-                    <a href=""><li>EVENTS</li></a>
-                    <a href=""><li>TICKETS</li></a>
-                    <a href=""><li>GALLERY</li></a>
-                    <a href=""><li>CONTACT</li></a>
-                    <input type="checkbox" name="toggle" class="mobileToggle" id="toggle" checked/>
-                    <label for="toggle"></label>
-                    <a href=""><img id='login-img' src="/src/assets/login.png" alt="user-log"/></a>
-                    
-                </nav>
-            </header>
-            <div className="Video">
-                <img src="https://shorturl.at/boIN1" alt="video_motion" />
-                <h1>3X3 INTERN <strong>BARCELONA</strong></h1>
-            </div>
+
+            <Header />
+            <Video />
+
             <hr />
             <div className="container">
                 <Card title="ABOUT" text="Take a look to our mission with this competition and
@@ -34,6 +27,7 @@ function App() {
                 chronicles of every final and semifinal"/>
                 <Card title="" text="" />
             </div>
+
         </div>
     )
 }

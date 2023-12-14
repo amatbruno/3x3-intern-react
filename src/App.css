@@ -10,7 +10,7 @@ header {
     z-index: 1;
     overflow: hidden;
     top: 0;
-    padding: 0;
+    padding: 25px;
     margin: auto;
 }
 
@@ -20,7 +20,7 @@ nav {
 
 li {
     list-style: none;
-    padding: 25px;
+    padding: 5px;
 }
 
 a,
