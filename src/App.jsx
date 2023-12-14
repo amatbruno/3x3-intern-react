@@ -4,30 +4,26 @@ import Video from './components/Video';
 import Header from './components/Header';
 
 
-
 function App() {
-    
 
 
     return (
         <div className="App">
-
             <Header />
             <Video />
-
             <hr />
             <div className="container">
                 <Card title="ABOUT" text="Take a look to our mission with this competition and
                 also spectators need to consider follow some rules and policies to create a 
                 respectfull environment."/>
-                <Card title="TICKETS" text="Get your tickets now and connect with the 
-                street basketball family watching the best matches, meeting people and 
+                <Card title="TICKETS" text="Get your tickets now and enjoy with the 
+                street basketball family watching the best matches and 
                 having fun with a lot of activities!"/>
-                <Card title="GALLERY" text="See the latest winners from older editions and the
-                chronicles of every final and semifinal"/>
-                <Card title="" text="" />
+                <Card title="GALLERY" text="Discover the winners from the latest editions and the
+                chronicles of every final and semifinal, It's like you were there!"/>
+                <Card title="CONTACT" text="Feel free to ask any questions or problems, 
+                or simply provide an opinion to our support, that will help us improve!" />
             </div>
-
         </div>
     )
 }
