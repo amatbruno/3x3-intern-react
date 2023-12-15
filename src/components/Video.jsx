@@ -3,8 +3,8 @@ import React from 'react'
 function Video() {
     return (
         <div className="Video">
-            <img src="https://shorturl.at/boIN1" alt="video_motion" id='main-video' />
-            <h1>3X3 INTERN <strong>BARCELONA</strong></h1>
+            <img src="/src/assets/homepage_vid.gif" alt="video_motion" id='main-video' />
+            <div className="centered"><h1>THE 3X3 INTERN BARCELONA</h1></div>
         </div>
     )
 }

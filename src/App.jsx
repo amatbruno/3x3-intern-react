@@ -11,8 +11,8 @@ function App() {
         <div className="App">
             <Header />
             <Video />
-            <hr />
             <div className="container">
+                <hr />
                 <Card title="ABOUT" text="Take a look to our mission with this competition and
                 also spectators need to consider follow some rules and policies to create a 
                 respectfull environment."/>
