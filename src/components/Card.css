@@ -1,5 +1,5 @@
 .Card {
-    width: 68%;
+    width: 55%;
     border: 1px #949494 solid;
     display: flex;
     align-items: center;
@@ -29,34 +29,41 @@
 }
 
 .Card img {
-    width: 25%;
+    width: 18%;
 }
+
 .Card h2 {
     font-size: 40px;
 }
+
 .Card p {
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .elements {
     display: inline-block;
     margin-left: 50px;
-    width: 45%;
+    width: 50%;
 }
 
 button {
     margin: auto;
     padding: 15px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     border-radius: 10px;
     border: none;
     border: transparent solid 1px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.5s ease;
 }
+
 button:hover {
     cursor: pointer;
     color: white;
-    background-color: #ff886496;
     border: white solid 1px;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: solid 1px #ff9372b4;
+    ;
 }
