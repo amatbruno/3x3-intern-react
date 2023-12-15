@@ -10,8 +10,8 @@ function Header() {
     return (
         <header>
             <nav>
-                <Link to="/" onClick={click}><img src="/src/assets/logo.png" alt="" /></Link>
-                <Link to="/events">EVENTS</Link>
+                <Link to="/" onClick={click}><img src="/src/assets/logo.png" alt="logo" /></Link>
+                <Link to="/events" >EVENTS</Link>
                 <Link to="/tickets">TICKETS</Link>
                 <Link to="/gallery">GALLERY</Link>
                 <Link to="/contact">CONTACT</Link>
