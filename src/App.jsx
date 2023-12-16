@@ -14,7 +14,7 @@ function App() {
         const typed = new Typed(el.current, {
             strings: ['Discover <strong>all of our services.</strong>',"Discover <strong>new experiencies.</strong>", 
             "Discover <strong>pure basketball.</strong>", "Discover <strong>yourself.</strong>"],
-            typeSpeed: 30,
+            typeSpeed: 25,
             loop: true,
             backSpeed: 0,
             smartBackspace: true

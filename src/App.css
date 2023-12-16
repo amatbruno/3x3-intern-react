@@ -18,14 +18,13 @@ header {
 
 footer {
     height: 100px;
-    overflow: hidden;
     padding: 20px;
-    margin: auto;
     background-color: #181818;
 }
 
 nav {
     display: flex;
+    
 }
 nav img {
     width: 45px;
@@ -91,14 +90,14 @@ a:hover::before {
     width: 100%;
     letter-spacing: 6px;
     text-align: center;
-    border-top: white solid 1px;
+    
     
 }
 .centered p {
     margin: auto;
     text-align: center;
     padding: 25px;
-    border-bottom: white solid 1px;
+   
     font-size: 20px;
 }
 
