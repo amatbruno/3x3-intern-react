@@ -5,9 +5,11 @@ import Card from './components/Card';
 import Video from './components/Video';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import cards from './data/cards';
 
 
 function App() {
+    //TypedJs Section
     const el = React.useRef(null);
 
     React.useEffect(() => {
@@ -26,6 +28,12 @@ function App() {
     }, []);
 
 
+    //Render from arrJs
+    const cardsList = cards.map((v,index) => {
+        return <Card key={index} title={v.sectName} text={v.desc} img={v.img} />;
+    });
+
+
     return (
         <div className="App">
             <Header />
@@ -35,16 +43,7 @@ function App() {
                 <span id='intro' ref={el} />
             </div>
             <div className="container">
-
-                <Card title="ABOUT" text="Get all the information about the tournament;
-                the teams, basketball rules, events location, players ranking and much more."/>
-                <Card title="TICKETS" text="Get your tickets now and enjoy with the 
-                street basketball family watching the best matches and 
-                having fun with a lot of activities."/>
-                <Card title="GALLERY" text="Discover the winners from the latest editions and the
-                chronicles of every final and semifinal, It's like you were there."/>
-                <Card title="CONTACT" text="Feel free to ask any questions or problems, 
-                or simply provide an opinion to our support, that will help us improve." />
+                {cardsList}
             </div>
             <Footer />
         </div>
@@ -52,4 +51,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
