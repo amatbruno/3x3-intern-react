@@ -9,7 +9,6 @@ header {
     width: 100%;
     z-index: 1;
     position: fixed;
-    overflow: hidden;
     top: 0;
     padding: 15px;
     margin: auto;
@@ -192,3 +191,5 @@ hr {
         }
     }
 }
+
+

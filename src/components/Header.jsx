@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function Header() {
     function click() {
@@ -10,7 +10,7 @@ function Header() {
         <header>
             <nav>
                 <Link to="/"><img src="/src/assets/logo.png" alt="logo" /></Link>
-                <Link to="/events" >EVENTS</Link>
+                <Link to="/events" >EVENT</Link>
                 <Link to="/tickets">TICKETS</Link>
                 <Link to="/gallery">GALLERY</Link>
                 <Link to="/contact">CONTACT</Link>
@@ -18,6 +18,7 @@ function Header() {
                 <label htmlFor="toggle"></label> */}
                 <Link to="/login"><img id='login-img' src="/src/assets/login.png" alt="user-log" /></Link>
             </nav>
+            <Outlet />
         </header>
     )
 }
