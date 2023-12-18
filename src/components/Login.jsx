@@ -6,7 +6,7 @@ import { FaGoogle, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 function Login() {
     return (
-        <div className="container" id='container'>
+        <div className="container2" id='container'>
             <div className="form-container sign-up">
                 <form>
                     <h1>Create Account</h1>
@@ -56,7 +56,7 @@ function Login() {
                         <p>Register into our page to use a all of 
                             the functionalities!
                         </p>
-                        <button className="hidden" id='login'>Sign in</button>
+                        <button className="hidden" id='register'>Sign up</button>
                     </div>
                 </div>
             </div>

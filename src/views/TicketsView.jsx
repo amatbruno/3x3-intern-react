@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../components/Header'
 
 function TicketsView() {
     return (
-        <div>TicketsView</div>
+        <div>
+            <Header />
+            TicketsView
+        </div>
     )
 }
 

@@ -1,8 +1,12 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
     margin: auto;
+}
+
+body {
+    margin-top: 64px;
 }
 
 header {
