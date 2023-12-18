@@ -29,8 +29,7 @@ nav img {
     width: 45px;
 }
 
-a,
-input {
+a {
     font-weight: 600;
     color: white;
     text-decoration: inherit;
@@ -119,7 +118,7 @@ hr {
 /*
 * TOGGLE CHECKBOX iOS
 */
-.inactiveMixin {
+/* .inactiveMixin {
     content: "";
     position: absolute;
     display: block;
@@ -135,7 +134,7 @@ hr {
 }
 
 /* Mobile Toggle Switch*/
-.toggleWrapper {
+/* .toggleWrapper {
     margin: auto;
     padding: 20px;
     width: 55px;
@@ -178,7 +177,7 @@ hr {
             }
 
             /* When Active*/
-            &:checked {
+            /*&:checked {
                 &+label:before {
                     background: green;
                     transition: width .2s cubic-bezier(0, 0, 0, .1);
@@ -190,6 +189,7 @@ hr {
             }
         }
     }
-}
+} */
+
 
 

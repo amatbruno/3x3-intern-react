@@ -10,7 +10,7 @@ function Card(props) {
                 <h2 id='tit'>{props.title}</h2>
                 <p>{props.text}</p>
             </div>
-            <button>Know More</button>
+            <button className='btn-homepage'>Know More</button>
         </div>
     )
 }
