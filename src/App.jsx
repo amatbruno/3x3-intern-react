@@ -1,14 +1,12 @@
 // App.jsx
 import './App.css';
 import React from 'react';
-import Header from './components/Header';
 import { Routes, Route } from 'react-router-dom';
 import HomeView from './views/HomeView';
 import EventView from './views/EventView';
 import GalleryView from './views/GalleryView';
 import TicketsView from './views/TicketsView';
 import ContactView from './views/ContactView';
-import Footer from './components/Footer';
 import LoginView from './views/LoginView';
 
 function App() {

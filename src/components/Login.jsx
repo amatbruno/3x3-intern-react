@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css'
-
+import axios from 'axios';
 import { FaGoogle, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 
 function Login() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleRegister = async () => {
+        try {
+            await axios.post('http://localhost:3001/register', { username, password });
+            console.log('Usuario registrado exitosamente');
+        } catch (error) {
+            console.error('Error al registrar usuario', error);
+        }
+    };
+
     return (
         <div className="container2" id='container'>
             <div className="form-container sign-up">
@@ -15,13 +27,12 @@ function Login() {
                         <i><FaGithub /></i>
                         <i><FaLinkedin /></i>
                         <i><FaFacebook /></i>
-                        
                     </div>
                     <span>Or use your email for registration</span>
-                    <input type="name" placeholder='Introduce your name'/>
-                    <input type="text" placeholder='Introduce your email'/>
-                    <input type="password" placeholder='Introduce your password'/>
-                    <input type="password" placeholder='Confirm your password'/>
+                    <input type="name" placeholder='Introduce your name' />
+                    <input type="text" placeholder='Introduce your email' />
+                    <input type="password" placeholder='Introduce your password' />
+                    <input type="password" placeholder='Confirm your password' />
                     <button>Sign Up</button>
                 </form>
             </div>
@@ -34,11 +45,10 @@ function Login() {
                         <i><FaGithub /></i>
                         <i><FaLinkedin /></i>
                         <i><FaFacebook /></i>
-                        
                     </div>
                     <span>Or use your email for registration</span>
-                    <input type="text" placeholder='Introduce your email'/>
-                    <input type="password" placeholder='Introduce your password'/>
+                    <input type="text" placeholder='Introduce your email' />
+                    <input type="password" placeholder='Introduce your password' />
                     <button>Sign In</button>
                 </form>
             </div>
@@ -53,7 +63,7 @@ function Login() {
                     </div>
                     <div className="toggle-panel toggle-right">
                         <h1>Hello User!</h1>
-                        <p>Register into our page to use a all of 
+                        <p>Register into our page to use a all of
                             the functionalities!
                         </p>
                         <button className="hidden" id='register'>Sign up</button>
