@@ -9,20 +9,34 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 9%;
     box-shadow: #32325d23 1px 0px 3px 1px, #0000007e 1px 1px 3px 1px;
     margin: auto auto 25px;
     padding: 10px;
 }
 
 .hour-date {
+    width: 70%;
     display: flex;
     flex-direction: column;
 }
 
-.versus {
+.miscellaneous {
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 7rem;
+}
+
+.versus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+#deffered-img {
+    width: 50px;
 }

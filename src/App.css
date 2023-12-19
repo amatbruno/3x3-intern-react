@@ -74,9 +74,11 @@ a:hover::before {
 
 .Video {
     position: relative;
+
 }
 .Video img {
     width: 100%;
+    height: 95vh;
     filter:brightness(0.2);
 }
 .centered {

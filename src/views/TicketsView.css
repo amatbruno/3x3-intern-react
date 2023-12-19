@@ -6,35 +6,55 @@ body {
 .head-elem {
     text-align: center;
     width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
 
 #tick-img {
-    width: 80%;
+    width: 100%;
     height: 95vh;
     filter: brightness(0.2);
     position: relative;
 }
 
 .head-elem h1,
-.head-elem p
-.btn-buy {
+.head-elem p,
+.head-elem .btn-buy {
     position: absolute;
-    width: 100%;
     text-align: center;
     color: white;
     margin: auto;
     z-index: 1;
-    /* Ensure text is visible against the image */
 }
 
 .btn-buy {
-    padding: 10px 40px;
+    width: 150px;
+}
+
+.btn-buy {
+    padding: 13px 35px;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 11px;
+    border: 1px solid transparent;
+}
+.btn-buy:hover, .btn-buy2:hover {
+    background-color: #c94821b4;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn-buy2{
+    width: 50%;
+    padding: 13px 35px;
+    border-radius: 4px;
+    font-size: 13px;
     border: none;
+    border: 1px solid transparent;
 }
 
 .head-elem h1 {
@@ -44,8 +64,6 @@ body {
 .head-elem p {
     margin-bottom: 5rem;
 }
-
-
 
 
 
@@ -66,7 +84,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10%;
+    gap: 8%;
     margin: auto;
     padding: 30px;
     border-bottom: 1px black solid;

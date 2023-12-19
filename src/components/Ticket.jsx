@@ -1,20 +1,23 @@
 import React from 'react'
 import './Ticket.css'
 
-function Ticket() {
+function Ticket(props) {
     return (
         <div className="Ticket">
             <div className="hour-date">
-                <h2>Fecha</h2>
-                <h3>Hora</h3>
+                <h2>{props.date}</h2>
+                <h3>{props.time}</h3>
             </div>
-            <p>Category</p>
+            <div className="miscellaneous">
+                <img src={props.deffered} alt='deffered_icon' id='deffered-img' />
+                <p>{props.category} </p>
+            </div>
             <div className="versus">
-                <span>Equipo 1</span>
+                <span>{props.team1}</span>
                 <img src="https://img.icons8.com/ios-filled/50/000000/battle.png" width="20px" alt="vs_img" />
-                <span>Equipo 2</span>
+                <span>{props.team2}</span>
             </div>
-            <button className='btn-buy'>BUY TICKET</button>
+            <button className='btn-buy2'>BUY TICKET</button>
         </div>
     )
 }

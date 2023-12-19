@@ -7,7 +7,7 @@ function GalleryView() {
 
 
     return (
-        <div>
+        <div className='App'>
             <Header />
             <section>
                 <div className="wrapper">

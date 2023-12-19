@@ -2,8 +2,14 @@ import React from 'react'
 import Header from '../components/Header'
 import './TicketsView.css'
 import Ticket from '../components/Ticket'
+import tickets from '../data/tickets'
 
 function TicketsView() {
+
+    const ticketsList = tickets.map((v, index) => {
+        return <Ticket key={index} date={v.date} time={v.time} category={v.category} deffered={v.deffered} team1={v.team1} team2={v.team2}/>
+    });
+
     return (
         <div className="App">
             <Header />
@@ -19,11 +25,7 @@ function TicketsView() {
                     <p>The best matches offered by 3x3_Intern, choose your preferred one!</p>
                 </div>
                 <div className="tickets-comp">
-                    < Ticket />
-                    < Ticket />
-                    < Ticket />
-                    < Ticket />
-                    < Ticket />
+                    {ticketsList}
                 </div>
             </div>
         </div>
