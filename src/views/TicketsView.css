@@ -8,31 +8,33 @@ body {
     width: 100%;
     margin: auto;
     position: relative;
-    max-width: 1200px;
     overflow: hidden;
 }
 
 #tick-img {
-    width: 100%;
-    height: 900px;
-    filter: brightness(0.4);
+    width: 80%;
+    height: 95vh;
+    filter: brightness(0.2);
     position: relative;
 }
 
 .head-elem h1,
-.head-elem p,
-.head-elem .btn-buy {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  bottom: 0;
-  color: white; /* Ensure text is visible against the image */
+.head-elem p
+.btn-buy {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: auto;
+    z-index: 1;
+    /* Ensure text is visible against the image */
 }
 
 .btn-buy {
     padding: 10px 40px;
     border-radius: 4px;
     font-size: 12px;
+    border: none;
 }
 
 .head-elem h1 {
@@ -43,3 +45,42 @@ body {
     margin-bottom: 5rem;
 }
 
+
+
+
+
+.tickets-sect {
+    margin: 0 auto;
+    padding: 0;
+    background: whitesmoke;
+    color: black;
+    padding: 5px;
+    width: 65%;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.tickets-elements {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10%;
+    margin: auto;
+    padding: 30px;
+    border-bottom: 1px black solid;
+}
+.tickets-elements h3, p {
+    letter-spacing: 1px;
+}
+.tickets-elements h3 {
+    font-weight: 600;
+}
+.tickets-elements p {
+    font-weight: 400;
+}
+
+.tickets-comp {
+    padding: 20px;
+}

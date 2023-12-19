@@ -1,0 +1,28 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.Ticket {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    box-shadow: #32325d23 1px 0px 3px 1px, #0000007e 1px 1px 3px 1px;
+    margin: auto auto 25px;
+    padding: 10px;
+}
+
+.hour-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.versus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
