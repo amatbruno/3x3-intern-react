@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head-elem {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+#tick-img {
+    width: 100%;
+    height: 900px;
+    filter: brightness(0.4);
+    position: relative;
+}
+
+.head-elem h1,
+.head-elem p,
+.head-elem .btn-buy {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  color: white; /* Ensure text is visible against the image */
+}
+
+.btn-buy {
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.head-elem h1 {
+    margin-bottom: 6rem;
+}
+
+.head-elem p {
+    margin-bottom: 5rem;
+}
+

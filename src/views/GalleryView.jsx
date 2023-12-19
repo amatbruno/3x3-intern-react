@@ -1,7 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-import images from '../data/images'
-import Image from '../components/Image'
 import './GalleryView.css'
 
 function GalleryView() {
