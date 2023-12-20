@@ -2,12 +2,12 @@ body {
     margin-top: 64px;
 }
 
-.sign-in-container {
-    margin: auto auto 100px;;
+.sign-up-container {
+    margin: auto auto 50px;
     width: 50%;
 }
 
-.sign-in-container form{
+.sign-up-container form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,13 +15,13 @@ body {
     width: 100%;
 }
 
-.sign-in-container input {
+.sign-up-container input {
     margin: 12px;
     width: 30%;
     padding: 7px;
 }
 
-.sign-in-container button {
+.sign-up-container button {
     width: 10%;
     padding: 7px;
 }
