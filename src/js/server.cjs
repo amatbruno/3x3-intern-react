@@ -12,18 +12,18 @@ const pool = new Pool({
     port: 5432,
 });
 
-app.use(express.json()); // parse JSON requests
+app.use(express.json()); //Parse JSON requests
 app.use(cors());
 
 //Register Request
 app.post('/api/register', async (req, res) => {
-    const { userId, username, realName, email, password } = req.body;
+    const { username, realName, email, password } = req.body;
 
-    await pool.query('INSERT INTO users (user_id, username, real_name, email, password) VALUES ($1, $2, $3, $4, $5)', [userId, username, realName, email, password]) , (err, results);
+    await pool.query('INSERT INTO userspage (username, real_name, email, password) VALUES ($1, $2, $3, $4)', [username, realName, email, password]);
 
     if (err) {
-        console.error('Error al crear el usuario:', err);
-        res.status(500).json({ error: 'Error al crear el usuario' });
+        console.error('Error al crear el usuario');
+        res.status(500).json({ err: 'Error al crear el usuario' });
     } else {
         res.json({ message: 'Usuario creado con exito', admin: newAdmin });
     }
