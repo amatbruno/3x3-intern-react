@@ -37,7 +37,7 @@ const tickets = [
         category: "Junior",
         deffered: '/src/assets/not-deffered.png',
         team1: "Equipo Centauros",
-        team2: "Talaya Cipeste FC",
+        team2: "Equipo de Ejemplo",
     },
     {
         date: "10-01-2024",
@@ -52,16 +52,16 @@ const tickets = [
         time: "11:30h",
         category: "Junior",
         deffered: 'https://img.icons8.com/fluency/96/tv.png',
-        team1: "Mirador de Montepinar FC",
-        team2: "Talaya Cipeste FC",
+        team1: "Las Divinas",
+        team2: "Fans de Marta Díaz",
     },
     {
         date: "12-01-2024",
         time: "20:30h",
         category: "Senior",
         deffered: 'https://img.icons8.com/fluency/96/tv.png',
-        team1: "Mirador de Montepinar FC",
-        team2: "Talaya Cipeste FC",
+        team1: "Los Amigos",
+        team2: "Team Queso",
     }
 ];
 

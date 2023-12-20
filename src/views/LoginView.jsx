@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Login from '../components/Login'
+import Register from '../components/Registration'
 
 function LoginView() {
 
@@ -9,6 +10,7 @@ function LoginView() {
         <div>
             <Header />
             <Login />
+            <Register />
             <Footer />
         </div>
     )
