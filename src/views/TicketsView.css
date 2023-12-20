@@ -43,7 +43,7 @@ body {
 }
 .btn-buy:hover, .btn-buy2:hover {
     background-color: #c94821b4;
-    color: black;
+    color: whitesmoke;
     cursor: pointer;
     border: 1px solid black;
 }
@@ -73,10 +73,11 @@ body {
     background: whitesmoke;
     color: black;
     padding: 5px;
-    width: 65%;
+    width: 90%;
     border-radius: 1rem;
     text-align: center;
 }
+
 
 .tickets-elements {
     width: 100%;
@@ -87,7 +88,7 @@ body {
     gap: 8%;
     margin: auto;
     padding: 30px;
-    border-bottom: 1px black solid;
+    border-bottom: 1px rgba(100, 100, 100, 0.384) solid;
 }
 .tickets-elements h3, p {
     letter-spacing: 1px;
@@ -98,6 +99,7 @@ body {
 .tickets-elements p {
     font-weight: 400;
 }
+
 
 .tickets-comp {
     padding: 20px;

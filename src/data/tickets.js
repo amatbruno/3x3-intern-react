@@ -4,7 +4,7 @@ const tickets = [
         time: "15:00h",
         category: "Senior",
         deffered: 'https://img.icons8.com/fluency/96/tv.png',
-        team1: "Mirador de Montepinar FC",
+        team1: "Mirador Montepinar FC",
         team2: "Talaya Cipeste FC",
     },
     {
