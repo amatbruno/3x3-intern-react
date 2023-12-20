@@ -7,18 +7,18 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 3rem;
     box-shadow: #32325d23 1px 0px 3px 1px, #0000007e 1px 1px 3px 1px;
     margin: auto auto 20px;
     padding: 7px;
 }
 
 .hour-date {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .miscellaneous {
@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7rem;
+    gap: 5rem;
 }
 
 .versus {
@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15%;
+    gap: 1rem;
 }
 
 #deffered-img {
