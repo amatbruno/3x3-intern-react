@@ -15,17 +15,18 @@ body {
 }
 
 .hour-date {
-    width: 90%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
 .miscellaneous {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
     gap: 5rem;
 }
 
@@ -34,6 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 2px;
     gap: 1rem;
 }
 

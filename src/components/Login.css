@@ -17,7 +17,6 @@ body {
     position: relative;
     max-width: 100%;
     min-height: 480px;
-    overflow: hidden;
     margin: auto;
 }
 .container2 p{
@@ -148,7 +147,6 @@ body {
     left: 50%;
     width: 50%;
     height: 100%;
-    overflow: hidden;
     transition: all 0.6s ease-in-out;
     border-radius: 150px 0 0 100px;
     z-index: 1000;

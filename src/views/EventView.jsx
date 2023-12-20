@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 
-function AboutView() {
+function EventView() {
   return (
     <div>
       <Header />
@@ -10,4 +10,4 @@ function AboutView() {
   )
 }
 
-export default AboutView
+export default EventView

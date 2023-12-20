@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import './TicketsView.css'
 import Ticket from '../components/Ticket'
 import tickets from '../data/tickets'
@@ -28,6 +29,7 @@ function TicketsView() {
                     {ticketsList}
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
