@@ -17,10 +17,10 @@ function TicketsView() {
             <div className="head-elem">
                 <img id='tick-img' src="https://cdn.pixabay.com/photo/2013/02/15/02/16/basketball-81775_1280.jpg" alt="header_img" />
                 <h1>BUY YOUR TICKETS WITH A 50% OFF DISCOUNT</h1>
-                <p>This Christmas </p>
+                <p>This Christmas take here to your familly and/or friends to the best matches and receive especial extra discounts!</p>
                 <button className='btn-buy'>BUY NOW</button>
             </div>
-            <div className="tickets-sect">
+            <div className="tickets-sect" id='tickt-sect'>
                 <div className="tickets-elements">
                     <h3>INCOMING MATCHES ON JANUARY!</h3>
                     <p>The best matches offered by 3x3_Intern, choose your preferred one!</p>

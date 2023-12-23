@@ -19,6 +19,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: -1rem;
+    line-height: 1px;
 }
 
 .miscellaneous {
@@ -27,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    gap: 8rem;
+    gap: 7rem;
 }
 
 .versus {

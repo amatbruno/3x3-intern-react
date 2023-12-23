@@ -5,6 +5,10 @@
     margin: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin-top: 64px;
 }
@@ -94,14 +98,11 @@ a:hover::before {
     width: 100%;
     letter-spacing: 6px;
     text-align: center;
-    
-    
 }
 .centered p {
     margin: auto;
     text-align: center;
     padding: 25px;
-   
     font-size: 20px;
 }
 
