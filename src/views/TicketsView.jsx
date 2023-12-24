@@ -4,12 +4,30 @@ import Footer from '../components/Footer'
 import './TicketsView.css'
 import Ticket from '../components/Ticket'
 import tickets from '../data/tickets'
+import Swal from 'sweetalert2'
+import { useNavigate  } from 'react-router-dom'
 
 function TicketsView() {
-
     const ticketsList = tickets.map((v, index) => {
         return <Ticket key={index} date={v.date} time={v.time} category={v.category} deffered={v.deffered} team1={v.team1} team2={v.team2} />
     });
+
+    const navigate = useNavigate();
+
+    function paymentSucces() {
+        Swal.fire({
+            title: 'Payment Succesfull!',
+            text: 'Do you want to return to the homepage or keep navigating? ',
+            icon: 'success', 
+            confirmButtonText: 'Go to homepage',
+            cancelButtonText: 'Keep navigating',
+            showCancelButton: true,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                navigate('/')
+            }
+        });
+    }
 
     return (
         <div className="App">
@@ -25,12 +43,13 @@ function TicketsView() {
                 </div>
                 <div className="tickets-comp">
                     {ticketsList}
-                    <div className="zone-selection hidden">
+
+                    <div className="zone-selection">
                         <h2>Select your sit to continue with the ticket payment:</h2>
 
                         <div className="map-container">
                             <img src="/src/assets/field-img.png" useMap="#image-map" />
-                        
+                            <button className="btn-pay" onClick={paymentSucces}>SAVE & PAY</button>
                         </div>
 
                         <map name="image-map">
