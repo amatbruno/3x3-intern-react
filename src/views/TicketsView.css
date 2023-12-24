@@ -1,11 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .head-elem {
     text-align: center;
     width: 100%;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,24 +17,22 @@ body {
 }
 
 #tick-img {
-    width: 90%;
-    height: 95vh;
-    filter: brightness(0.2);
+    width: 100%;
+    max-width: none;
+    height: 94vh;
+    filter: brightness(0.1);
     position: relative;
 }
 
-.head-elem h1,
-.head-elem p,
 .head-elem .btn-buy {
     position: absolute;
     text-align: center;
     color: white;
     margin: auto;
-    z-index: 1;
 }
 
 .btn-buy {
-    width: 10%;
+    width: auto;
 }
 
 .btn-buy {
@@ -41,14 +41,15 @@ body {
     font-size: 11px;
     border: 1px solid transparent;
 }
-.btn-buy:hover, .btn-buy2:hover {
-    background-color: #c94821b4;
+
+.btn-buy:hover,
+.btn-buy2:hover {
     color: whitesmoke;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid #8b8b8ba2;
 }
 
-.btn-buy2{
+.btn-buy2 {
     width: 30%;
     padding: 13px 35px;
     border-radius: 4px;
@@ -68,19 +69,19 @@ body {
 
 
 .tickets-sect {
-    margin: 0 auto;
-    padding: 0;
+    margin: auto;
     background: whitesmoke;
     color: black;
-    padding: 5px;
+    padding: 15px;
     width: 90%;
+    max-width: 100vw;
     border-radius: 1rem;
     text-align: center;
 }
 
 
 .tickets-elements {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,17 +91,23 @@ body {
     padding: 30px;
     border-bottom: 1px rgba(100, 100, 100, 0.384) solid;
 }
-.tickets-elements h3, p {
+
+.tickets-elements h3,
+p {
     letter-spacing: 1px;
 }
+
 .tickets-elements h3 {
     font-weight: 600;
 }
+
 .tickets-elements p {
     font-weight: 400;
 }
 
-
 .tickets-comp {
     padding: 20px;
 }
+
+
+
