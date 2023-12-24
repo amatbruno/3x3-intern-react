@@ -9,10 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    margin-top: 64px;
-}
-
 header {
     width: 100%;
     z-index: 1;
