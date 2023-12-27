@@ -23,7 +23,7 @@ function Login() {
                 <span>Enter your email and password to access your services</span>
                 <input type="text" placeholder='Introduce your email' />
                 <input type="password" placeholder='Introduce your password' />
-                <button>Sign Up</button>
+                <button>Sign In</button>
             </form>
         </div>
     )

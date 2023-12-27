@@ -46,7 +46,7 @@ function Registration() {
                 <input type="email" placeholder='Introduce your email' onChange={(e) => setEmail(e.target.value)} />
                 <input type="password" placeholder='Introduce your password' onChange={(e) => setPassword(e.target.value)} />
                 <input type="password" placeholder='Confirm your password' onChange={(e) => setConfirmPassword(e.target.value)} />
-                <button type='button' onClick={handleRegister}>Sign In</button>
+                <button type='button' onClick={handleRegister}>Sign Up</button>
             </form>
         </div>
     )

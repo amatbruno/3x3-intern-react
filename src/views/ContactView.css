@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.container-contact {
+    width: 100%;
+    min-height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container-contact .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.row div.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row div.left {
+    flex-basis: 35%;
+    min-width: 320px;
+    margin-right: 60px;
+}
+
+.row div.right {
+    flex-basis: 60%;
+}
+
+div.left .contactTitle h2 {
+    position: relative;
+    font-size: 28px;
+    color: #ddd;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+div.left .contactTitle h2::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: #888;
+    top: 120%;
+    left: 0;
+}
+
+div.left .contactTitle h2::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: #ff7e57;
+    top: calc(120% - 1px);
+    left: 0;
+}
+
+div.left .contactTitle p {
+    font-size: 17px;
+    color: #ccc;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding-bottom: 22px;
+}
+
+div.left .contactInfo {
+    margin-bottom: 16px;
+}
+
+.contactInfo .iconGroup {
+    display: flex;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.iconGroup .icon {
+    width: 45px;
+    height: 45px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+}
+
+.iconGroup .icon svg {
+    font-size: 20px;
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.iconGroup .details span {
+    display: block;
+    color: #888;
+    font-size: 18px;
+}
+
+.iconGroup .details span:nth-child(1) {
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+div.left .socialMedia {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 22px 0px 20px;
+}
+
+.socialMedia svg {
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: #5c5c5c solid 1px;
+    transition: 0.4s;
+    color: #ddd;
+    font-size: 18px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.socialMedia svg:hover {
+    transform: translateY(-5px);
+    background-color: #2e2e2e;
+    color: orange;
+    border: 1px solid orange;
+}
+
+
+
+/****RIGHT SECTION CODE****/
+.row div.right .mssgForm {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.row div.right .input-group {
+    margin: 18px 0px;
+    position: relative;
+}
+
+.mssgForm .half-width {
+    flex-basis: 48%;
+}
+
+.mssgForm .full-width {
+    flex-basis: 100%;
+}
+
+.mssgForm input,
+.mssgForm textarea {
+    width: 100%;
+    font-size: 18px;
+    padding: 2px 0px;
+    background-color: #2e2e2e;
+    color: #ddd;
+    border: none;
+    border-bottom: 2px solid #666;
+    outline: none;
+}
+
+.mssgForm textarea {
+    resize: none;
+    height: 220px;
+    display: block;
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 15px;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    color: #888;
+    font-size: 16px;
+    transition: 0.4s;
+    pointer-events: none;
+    margin-left: 8px;
+}
+
+.input-group:nth-child(4) label {
+    top: 2px;
+}
+
+.input-group input:focus~label,
+.input-group textarea:focus~label,
+.input-group input:valid~label,
+.input-group textarea:valid~label {
+    transform: translateY(-30px);
+    font-size: 20px;
+}
+
+.input-group button {
+    padding: 8px 16px;
+    font-size: 18px;
+    background-color: rgba(255, 166, 0, 0.685);
+    color: #353535;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px #0000004d;
+    transition: 0.4s;
+}
+
+.input-group button:hover {
+    background-color: #2e2e2e;
+    color: orange;
+    box-shadow: 0px 0px 15px #0000004d;
+    border: 1px solid orange;
+}
+
+@media(max-width: 1100px) {
+    .messageForm .halfWidth {
+        flex-basis: 100%;
+    }
+}
+
+@media(max-width: 900px) {
+    .container .row {
+        flex-wrap: wrap;
+    }
+
+    .row section.left,
+    .row section.right {
+        flex-basis: 100%;
+        margin: 0px;
+    }
+}
