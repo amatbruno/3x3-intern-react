@@ -2,25 +2,27 @@ import React, { useState } from 'react';
 import '../components/Registration.css'
 
 function Registration() {
-    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleRegister = async () => {
+    const handleRegister = async (e) => {
+        e.preventDefault();
+
         try {
             if (password !== confirmPassword) {
                 alert("Password doesn't match");
                 return;
             }
 
-            const response = await fetch('http://localhost:3001/api/register', {
+            const response = await fetch('http://localhost:3001/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    name,
+                    username,
                     email,
                     password,
                 }),
@@ -42,7 +44,7 @@ function Registration() {
             <form>
                 <h1>REGISTER</h1>
                 <span>Register with your email and password to discover all the features!</span>
-                <input type="text" placeholder='Introduce your name' onChange={(e) => setName(e.target.value)} />
+                <input type="text" placeholder='Introduce your username' onChange={(e) => setUsername(e.target.value)} />
                 <input type="email" placeholder='Introduce your email' onChange={(e) => setEmail(e.target.value)} />
                 <input type="password" placeholder='Introduce your password' onChange={(e) => setPassword(e.target.value)} />
                 <input type="password" placeholder='Confirm your password' onChange={(e) => setConfirmPassword(e.target.value)} />

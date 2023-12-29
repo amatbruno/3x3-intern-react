@@ -16,10 +16,10 @@ app.use(express.json()); //Parse JSON requests
 app.use(cors());
 
 //Register Request
-app.post('/api/register', async (req, res) => {
-    const { username, realName, email, password } = req.body;
+app.post('/register', async (req, res) => {
+    const { username, email, password } = req.body;
 
-    await pool.query('INSERT INTO userspage (username, real_name, email, password) VALUES ($1, $2, $3, $4)', [username, realName, email, password]);
+    await pool.query('INSERT INTO userspage (username, email, password) VALUES ($1, $2, $3)', [username, email, password]);
 
     if (err) {
         console.error('Error al crear el usuario');
@@ -32,18 +32,18 @@ app.post('/api/register', async (req, res) => {
 });
 
 //Login Request
-// app.get('/login', async (req, res) => {
-//     const { email, password } = req.body;
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
 
-//     // Ejemplo de consulta en la base de datos para autenticar
-//     const result = await pool.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email, password]);
+    // Ejemplo de consulta en la base de datos para autenticar
+    const result = await pool.query('SELECT * FROM userspage WHERE email = $1 AND password = $2', [email, password]);
 
-//     if (result.rows.length > 0) {
-//         res.json({ message: 'Inicio de sesión exitoso' });
-//     } else {
-//         res.status(401).json({ message: 'Credenciales incorrectas' });
-//     }
-// });
+    if (result.rows.length > 0) {
+        res.json({ message: 'Inicio de sesión exitoso' });
+    } else {
+        res.status(401).json({ message: 'Credenciales incorrectas' });
+    }
+});
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

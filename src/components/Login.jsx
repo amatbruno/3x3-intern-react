@@ -4,15 +4,16 @@ import axios from 'axios';
 
 
 function Login() {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleRegister = async () => {
+    const handleLogin = async (e) => {
+        e.preventDefault();
         try {
-            await axios.post('http://localhost:3001/register', { username, password });
-            console.log('Usuario registrado exitosamente');
+            await axios.post('http://localhost:3001/login', { email, password });
+            console.log('Este usuario existe');
         } catch (error) {
-            console.error('Error al registrar usuario', error);
+            console.error('Error al encontrar usuario', error);
         }
     };
 
@@ -21,9 +22,9 @@ function Login() {
             <form>
                 <h1>LOGIN</h1>
                 <span>Enter your email and password to access your services</span>
-                <input type="text" placeholder='Introduce your email' />
-                <input type="password" placeholder='Introduce your password' />
-                <button>Sign In</button>
+                <input type="text" placeholder='Introduce your email' onChange={(e) => setEmail(e.target.value)} />
+                <input type="password" placeholder='Introduce your password' onChange={(e) => setPassword(e.target.value)} />
+                <button type='button' onClick={handleLogin}>Sign In</button>
             </form>
         </div>
     )
