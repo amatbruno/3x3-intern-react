@@ -35,7 +35,6 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
-    // Ejemplo de consulta en la base de datos para autenticar
     const result = await pool.query('SELECT * FROM userspage WHERE email = $1 AND password = $2', [email, password]);
 
     if (result.rows.length > 0) {
@@ -45,6 +44,24 @@ app.post('/login', async (req, res) => {
     }
 });
 
+//Comtact Form Post
+app.post("/contact", async (req, res) => {
+    const { username, email, subject, description } = req.body;
+
+    await pool.query('INSERT INTO contact (username, email, subject, description) VALUES ($1, $2, $3, $4)', [username, email, subject, description]);
+
+    if (err) {
+        console.error('Error al mandar el formulario');
+        res.status(500).json({ err: 'Error al mandar el formulario' });
+    } else {
+        res.json({ message: 'Formulario enviado con exito' });
+    }
+
+    res.json({ message: 'Formulario enviado exitosamente' });
+})
+
+
+//SERVER LISTEN
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

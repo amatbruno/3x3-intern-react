@@ -1,8 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Header from '../components/Header'
 import './ContactView.css'
 
 function ContactView() {
+
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [description, setDescription] = useState('');
+
+    const handleContact = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:3001/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username,
+                    email,
+                    subject,
+                    description,
+                }),
+            });
+
+            if (response.ok) {
+                console.log("Form send correctly");
+            } else {
+                console.error("Error with the form send");
+            }
+        } catch (error) {
+            console.error("Error with the form send", error);
+        }
+    };
+
     return (
 
         <div>
@@ -83,23 +116,23 @@ function ContactView() {
                     <div className="col right">
                         <div className="mssgForm">
                             <div className="input-group half-width">
-                                <input type="text" name="" required="required" />
+                                <input type="text" name="" required="required" onChange={(e) => setUsername(e.target.value)} />
                                 <label>Your Name</label>
                             </div>
                             <div className="input-group half-width">
-                                <input type="email" name="" required="required" />
+                                <input type="email" name="" required="required" onChange={(e) => setEmail(e.target.value)} />
                                 <label>Your Email</label>
                             </div>
                             <div className="input-group full-width">
-                                <input type="text" name="" required="required" />
+                                <input type="text" name="" required="required" onChange={(e) => setSubject(e.target.value)} />
                                 <label>Subject</label>
                             </div>
                             <div className="input-group full-width">
-                                <textarea required="required" />
+                                <textarea required="required" onChange={(e) => setDescription(e.target.value)} />
                                 <label>Description</label>
                             </div>
                             <div className="input-group full-width">
-                                <button>Send Message</button>
+                                <button onClick={handleContact}>Send Message</button>
                             </div>
                         </div>
                     </div>

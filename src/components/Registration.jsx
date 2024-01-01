@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../components/Registration.css'
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Registration() {
     const [username, setUsername] = useState('');
@@ -29,7 +32,9 @@ function Registration() {
             });
 
             if (response.ok) {
-                console.log("User registraion correct");
+                console.log("User registration correct");
+                // navigate('/userarea');
+                // console.log("Navigated to /userarea");
             } else {
                 console.error("Error with the user registration");
             }

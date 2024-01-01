@@ -8,6 +8,8 @@ import GalleryView from './views/GalleryView';
 import TicketsView from './views/TicketsView';
 import ContactView from './views/ContactView';
 import LoginView from './views/LoginView';
+import UserArea from './views/UserArea';
+import AuthContainer from './components/AuthContainer';
 
 function App() {
     return (
@@ -18,7 +20,8 @@ function App() {
                 <Route path="tickets" element={<TicketsView />} />
                 <Route path="gallery" element={<GalleryView />} />
                 <Route path="contact" element={<ContactView />} />
-                <Route path="login" element={<LoginView />} />
+                <Route path="login" element={<AuthContainer />} />
+                <Route path="userarea" element={<UserArea />} />
             </Routes>
         </div>
     );
