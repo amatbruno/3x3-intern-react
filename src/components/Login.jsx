@@ -1,7 +1,15 @@
-import React, { useState } from 'react'
-import './Login.css'
+import React, { useState } from 'react';
 import axios from 'axios';
+import './Login.css'
 
+// Include the hashPassword function here or import it from the correct location
+async function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+}
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -9,11 +17,23 @@ function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
+
         try {
-            await axios.post('http://localhost:3001/login', { email, password });
-            console.log('Este usuario existe');
+            // Fetch the hashed password from the database based on the email
+            const response = await axios.post('http://localhost:3001/login', { email });
+            const hashedPasswordFromDB = response.data.hashedPassword;
+
+            // Hash the input password for comparison
+            const hashedInputPassword = await hashPassword(password);
+
+            // Compare the hashed input password with the hashed password from the database
+            if (hashedInputPassword === hashedPasswordFromDB) {
+                console.log('Login successful');
+            } else {
+                console.log('Incorrect credentials');
+            }
         } catch (error) {
-            console.error('Error al encontrar usuario', error);
+            console.error('Error finding user', error);
         }
     };
 
@@ -27,7 +47,7 @@ function Login() {
                 <button type='button' onClick={handleLogin}>Sign In</button>
             </form>
         </div>
-    )
+    );
 }
 
-export default Login
+export default Login;

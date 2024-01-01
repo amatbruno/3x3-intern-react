@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@sweetalert2/theme-dark": "^5.0.15",
+    "aws-sdk": "^2.1528.0",
     "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mock-aws-s3": "^4.0.2",
+    "nock": "^13.4.0",
     "pg": "^8.11.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
@@ -24,7 +27,8 @@
     "react-intersection-observer": "^9.5.3",
     "react-router-dom": "^6.21.0",
     "sweetalert2": "^11.10.1",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "vite-plugin-html": "^3.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import '../components/Registration.css'
-import { useNavigate } from 'react-router-dom';
+import '../components/Registration.css';
 
-
+function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    return crypto.subtle.digest('SHA-256', data).then(hashBuffer => {
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    });
+}
 
 function Registration() {
     const [username, setUsername] = useState('');
@@ -19,6 +25,9 @@ function Registration() {
                 return;
             }
 
+            // Hash the password before sending it to the server
+            const hashedPassword = await hashPassword(password);
+
             const response = await fetch('http://localhost:3001/register', {
                 method: 'POST',
                 headers: {
@@ -27,7 +36,7 @@ function Registration() {
                 body: JSON.stringify({
                     username,
                     email,
-                    password,
+                    password: hashedPassword,
                 }),
             });
 
@@ -43,7 +52,6 @@ function Registration() {
         }
     };
 
-
     return (
         <div className="sign-up-container">
             <form>
@@ -56,7 +64,7 @@ function Registration() {
                 <button type='button' onClick={handleRegister}>Sign Up</button>
             </form>
         </div>
-    )
+    );
 }
 
-export default Registration
+export default Registration;
