@@ -47,7 +47,7 @@ body {
     gap: 4rem;
     padding-top: 20px;
 }
-.fill-data form input[type=text] {
+.fill-data form input[type=text], .fill-data form input[type=number] {
     padding: 15px;
     width: 320px;
     font-size: 17px;

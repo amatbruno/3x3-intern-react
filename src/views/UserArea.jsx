@@ -3,6 +3,8 @@ import Header from '../components/Header'
 import './UserArea.css'
 
 function UserArea() {
+    //PUT OPERATION DDBB
+
     return (
         <div className="App">
             <Header />
@@ -26,7 +28,7 @@ function UserArea() {
                             <input type="text" placeholder='Type your surname' name="surname" />
                             <input type="text" placeholder='Type your username' name="username" />
                             <input type="text" placeholder='Type your email' name="email" />
-                            <input type="text" placeholder='Type your age (Optional)' name="surname" />
+                            <input type="number" placeholder='Type your age (Optional)' name="surname" />
                             <input type="text" placeholder='Type your height (Optional)' name="surname" />
                             <input type="submit" id="btnSend" value="Save Changes"/>
                         </form>
