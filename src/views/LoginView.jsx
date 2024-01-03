@@ -8,7 +8,7 @@ import './LoginView.css'
 function LoginView() {
 
     return (
-        <div className='App'>
+        <div className='login-view'>
             <Header />
             <Login />
             <Register />

@@ -8,9 +8,9 @@ function Footer() {
     return (
         <footer>
             <nav>
-                <Link className='foot-el' to="https://adventjs.dev/es#retos">Linkedin</Link>
-                <Link className='foot-el' to="https://adventjs.dev/es#retos">Github</Link>
-                <Link className='foot-el' to="https://adventjs.dev/es#retos">Suggestion</Link>
+                <Link className='foot-el' to="https://www.linkedin.com/in/mebruno/">Linkedin</Link>
+                <Link className='foot-el' to="https://github.com/amatbruno">Github</Link>
+                <Link className='foot-el' to="amattbruno@gmail.com">Email</Link>
             </nav>
             <div className="author">
                 <p>Made by Bruno Amat</p>

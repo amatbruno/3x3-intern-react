@@ -1,0 +1,20 @@
+.InfoCards {
+    width: 350px;
+    padding: 30px;
+    margin: auto 60px;
+    box-shadow: #aaaaaa6c 0px 2px 5px -1.5px, #3f3f3f00 0px 1px 1px -1px;
+    border-radius: .5rem;
+    text-align: justify;
+}
+.InfoCards h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.InfoCards p {
+    margin-bottom: 30px;
+    line-height: 1.8rem;
+}
+.InfoCards img {
+    width: 100%;
+}
