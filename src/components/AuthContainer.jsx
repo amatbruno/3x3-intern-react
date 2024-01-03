@@ -7,12 +7,12 @@ const AuthContainer = () => {
     const [isLoginMode, setIsLoginMode] = useState(true);
 
     return (
-        <div>
+        <div style={{ textAlign: 'center', paddingTop: '50px' }}>
             <Header />
             {isLoginMode ? <Login /> : <Registration />}
             <p>
                 {isLoginMode ? "Don't have an account? " : "Already have an account? "}
-                <a href="#" onClick={() => setIsLoginMode(!isLoginMode)} style={{textAlign: 'center'}}>
+                <a href="#" onClick={() => setIsLoginMode(!isLoginMode)}>
                     {isLoginMode ? 'Register here' : 'Login here'}
                 </a>
             </p>

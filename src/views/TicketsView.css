@@ -20,7 +20,7 @@ body {
     width: 100%;
     max-width: none;
     height: 94vh;
-    filter: brightness(0.1);
+    filter: brightness(0.2);
     position: relative;
 }
 

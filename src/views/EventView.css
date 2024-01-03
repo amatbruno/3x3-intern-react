@@ -17,20 +17,21 @@
 
 .intro-img img {
     width: 100%;
-    height: auto;
+    height: 55vh;
     filter: brightness(0.5);
 }
 
 .main-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    margin: auto;
 }
 
 .text-intro {
     width: 60%;
     margin: 50px auto;
     padding: 20px;
-    border-top: solid orange 1px;
+
     text-align: center;
 }
 
@@ -47,9 +48,10 @@
 }
 
 .faq-item {
-    border: solid #f5f5f5b0 1px;
-    padding: 35px;
+    padding: 40px;
     font-size: 20px;
+    border: .5px solid #f5f5f58a;
+    margin-bottom: 18px;
 }
 
 .faq-item details {
@@ -62,6 +64,7 @@
 }
 .faq-item summary:hover {
     color: orange;
+    text-decoration: underline;
 }
 
 .faq-item p {
