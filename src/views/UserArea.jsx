@@ -13,7 +13,7 @@ function UserArea() {
                 <div className="profile">
                     <div className="user-info">
                         <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="avatar" />
-                        <h1>Name</h1>
+                        <h1>Real Name</h1>
                         <h2>Team name</h2>
                         <h3>Country</h3>
                         <h4>Age</h4>

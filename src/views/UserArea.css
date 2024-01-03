@@ -49,9 +49,9 @@ body {
 }
 .fill-data form input[type=text] {
     padding: 15px;
-    width: 300px;
+    width: 320px;
     font-size: 17px;
-    border-radius: .7rem;
+    border-radius: .5rem;
     border: none;
 }
 .fill-data form input[type=submit] {
