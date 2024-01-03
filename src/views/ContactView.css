@@ -63,7 +63,7 @@ div.left .contactTitle h2::after {
     position: absolute;
     width: 25%;
     height: 3px;
-    background-color: #ff7e57;
+    background-color: orange;
     top: calc(120% - 1px);
     left: 0;
 }
@@ -227,13 +227,13 @@ textarea::-webkit-scrollbar-thumb {
 .input-group button {
     padding: 8px 16px;
     font-size: 18px;
-    background-color: rgba(255, 166, 0, 0.685);
-    color: #353535;
+    background-color: orange;
+    color: #252525;
     border: 1px solid transparent;
     border-radius: 25px;
     outline: none;
     cursor: pointer;
-    box-shadow: 0px 8px 15px #0000004d;
+    box-shadow: 0px 8px 15px #00000050;
     transition: 0.4s;
 }
 

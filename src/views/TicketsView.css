@@ -44,7 +44,7 @@ body {
 
 .btn-buy:hover,
 .btn-buy2:hover {
-    color: #ff7e57;
+    color: orange;
     cursor: pointer;
 }
 
@@ -80,7 +80,7 @@ body {
     cursor: pointer;
 }
 .btn-pay:hover {
-    color: #ff7e57;
+    color: orange;
 }
 
 
