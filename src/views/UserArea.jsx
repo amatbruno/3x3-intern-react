@@ -16,18 +16,17 @@ function UserArea() {
                     <div className="user-info">
                         <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="avatar" />
                         <h1>Real Name</h1>
-                        <h2>Team name</h2>
-                        <h3>Country</h3>
-                        <h4>Age</h4>
-                        <h5>Height</h5>
+                        <h2>Country</h2>
+                        <h3>Age</h3>
+                        <h4>Height</h4>
                     </div>
                     <div className="fill-data">
                         <p>Fill the required fields to complete your profile!</p>
                         <form>
-                            <input type="text" placeholder='Type your name' name="name" />
-                            <input type="text" placeholder='Type your surname' name="surname" />
-                            <input type="text" placeholder='Type your username' name="username" />
-                            <input type="text" placeholder='Type your email' name="email" />
+                            <input type="text" placeholder='Type your name' name="name" required />
+                            <input type="text" placeholder='Type your surname (Optional)' name="surname" />
+                            <input type="text" placeholder='Type your username' name="username" required />
+                            <input type="text" placeholder='Type your email' name="email" required />
                             <input type="number" placeholder='Type your age (Optional)' name="surname" />
                             <input type="text" placeholder='Type your height (Optional)' name="surname" />
                             <input type="submit" id="btnSend" value="Save Changes"/>

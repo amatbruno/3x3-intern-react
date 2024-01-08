@@ -40,12 +40,14 @@ body {
     border-radius: 4px;
     font-size: 11px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .btn-buy:hover,
 .btn-buy2:hover {
-    color: orange;
-    cursor: pointer;
+    background: orange;
+    color: #424242;
+    transition: .5s ease-in-out;
 }
 
 .btn-buy2 {
@@ -55,6 +57,7 @@ body {
     font-size: 13px;
     border: none;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .zone-selection {
@@ -79,8 +82,11 @@ body {
     border: none;
     cursor: pointer;
 }
+
 .btn-pay:hover {
-    color: orange;
+    background: orange;
+    color: #424242;
+    transition: .5s ease-in-out;
 }
 
 
@@ -111,6 +117,7 @@ body {
     justify-content: center;
     gap: 2rem;
 }
+
 .field-elements img {
     width: 175px;
     height: 175px;
@@ -152,16 +159,21 @@ p {
 }
 
 
-.vip, .general, .top {
-    transition: fill 0.2s;
+.vip,
+.general,
+.top {
+    transition: fill 0.3s;
     cursor: pointer;
 }
+
 .vip:hover {
     fill: #ff00ff5e;
 }
+
 .general:hover {
     fill: #0000ff5e;
 }
+
 .top:hover {
     fill: #ff00005d;
 }

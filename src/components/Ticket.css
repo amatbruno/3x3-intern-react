@@ -11,16 +11,16 @@ body {
     align-items: center;
     box-shadow: #32325d23 1px 0px 3px 1px, #0000007e 1px 1px 3px 1px;
     margin: auto auto 20px;
-    padding: 7px;
+    padding: 12px;
 }
 
 .hour-date {
     width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 1.8rem;
-    line-height: 1px;
+    gap: 1rem;
 }
 
 .miscellaneous {
