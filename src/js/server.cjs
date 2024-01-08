@@ -45,10 +45,8 @@ app.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
 
     const generated_id = getRandomID(7);
-    console.log(generated_id);
 
     try {
-        console.log('Antes de la inserción en la base de datos');
         await pool.query('INSERT INTO users (user_id, username, email, password) VALUES ($1, $2, $3, $4)', [generated_id, username, email, password]);
         res.json({ message: 'Usuario creado con éxito', admin: newAdmin });
     } catch (error) {
@@ -77,8 +75,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-
-
 // Contact Form Post
 app.post("/contact", async (req, res) => {
     const { subject, description, solve_date } = req.body;
@@ -90,11 +86,25 @@ app.post("/contact", async (req, res) => {
         await pool.query('INSERT INTO incidents (incident_id, subject, incidence_description, incident_start_date, incident_solve_date) VALUES ($1, $2, $3, $4, $5)', [generated_id, subject, description, actualDate, solve_date]);
         res.json({ message: 'Form sended correctly' });
     } catch (error) {
-        console.error('Error al mandar el formulario', error);
-        res.status(500).json({ err: 'Error al mandar el formulario' });
+        console.error('Error sending the form', error);
+        res.status(500).json({ err: 'Error sending the form' });
     }
 });
 
+// Profile update
+app.put("/update-profile", async (req, res) => {
+    const { name, surname, username, country, age, height } = req.body;
+
+    const generated_id = getRandomID(7);
+
+    try {
+        await pool.query("UPDATE players SET player_id = $1, real_name = $2, surname = $3, country = $4, age = $5, height = $6 WHERE username = $7", [generated_id, name, surname, country, age, height, username ] )
+        res.json({ message: 'User data updated correctly' });
+    } catch (error) {
+        console.error('Error updating the data', error);
+        res.status(500).json({ err: 'Error updating the data' });
+    }
+});
 
 
 //SERVER LISTEN
