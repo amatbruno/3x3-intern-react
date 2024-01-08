@@ -15,20 +15,46 @@ const pool = new Pool({
 app.use(express.json()); //Parse JSON requests
 app.use(cors());
 
-//Register Request
+
+//Random id generator
+function getRandomID(length) {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let id;
+
+    for (let i = 0; i < length; i++) {
+        const index = Math.floor(Math.random() * chars.length);
+        id += chars.charAt(index);
+    }
+    return id;
+}
+
+
+
+function getActualDate() {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    return `${year}-${month}-${day}`;
+}
+
+
+// Register Request
 app.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
 
-    await pool.query('INSERT INTO userspage (username, email, password) VALUES ($1, $2, $3)', [username, email, password]);
+    const generated_id = getRandomID(7);
+    console.log(generated_id);
 
-    if (err) {
-        console.error('Error al crear el usuario');
+    try {
+        console.log('Antes de la inserción en la base de datos');
+        await pool.query('INSERT INTO users (user_id, username, email, password) VALUES ($1, $2, $3, $4)', [generated_id, username, email, password]);
+        res.json({ message: 'Usuario creado con éxito', admin: newAdmin });
+    } catch (error) {
+        console.error('Error al crear el usuario', error);
         res.status(500).json({ err: 'Error al crear el usuario' });
-    } else {
-        res.json({ message: 'Usuario creado con exito', admin: newAdmin });
     }
-
-    res.json({ message: 'Usuario registrado exitosamente' });
 });
 
 //Login Request
@@ -36,7 +62,7 @@ app.post('/login', async (req, res) => {
     const { email } = req.body;
 
     try {
-        const result = await pool.query('SELECT * FROM userspage WHERE email = $1', [email]);
+        const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
 
         if (result.rows.length > 0) {
             const user = result.rows[0];
@@ -51,21 +77,24 @@ app.post('/login', async (req, res) => {
     }
 });
 
-//Comtact Form Post
+
+
+// Contact Form Post
 app.post("/contact", async (req, res) => {
-    const { username, email, subject, description } = req.body;
+    const { subject, description, solve_date } = req.body;
 
-    await pool.query('INSERT INTO contact (username, email, subject, description) VALUES ($1, $2, $3, $4)', [username, email, subject, description]);
+    const generated_id = getRandomID(7);
+    const actualDate = getActualDate();
 
-    if (err) {
-        console.error('Error al mandar el formulario');
+    try {
+        await pool.query('INSERT INTO incidents (incident_id, subject, incidence_description, incident_start_date, incident_solve_date) VALUES ($1, $2, $3, $4, $5)', [generated_id, subject, description, actualDate, solve_date]);
+        res.json({ message: 'Form sended correctly' });
+    } catch (error) {
+        console.error('Error al mandar el formulario', error);
         res.status(500).json({ err: 'Error al mandar el formulario' });
-    } else {
-        res.json({ message: 'Formulario enviado con exito' });
     }
+});
 
-    res.json({ message: 'Formulario enviado exitosamente' });
-})
 
 
 //SERVER LISTEN

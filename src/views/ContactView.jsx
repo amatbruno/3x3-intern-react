@@ -19,8 +19,6 @@ function ContactView() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    username,
-                    email,
                     subject,
                     description,
                 }),
@@ -116,11 +114,11 @@ function ContactView() {
                     <div className="col right">
                         <div className="mssgForm">
                             <div className="input-group half-width">
-                                <input type="text" name="" required="required" onChange={(e) => setUsername(e.target.value)} />
+                                <input type="text" name="" required="required" />
                                 <label>Your Name</label>
                             </div>
                             <div className="input-group half-width">
-                                <input type="email" name="" required="required" onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" name="" required="required" />
                                 <label>Your Email</label>
                             </div>
                             <div className="input-group full-width">
