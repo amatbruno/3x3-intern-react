@@ -10,7 +10,7 @@ function UserArea() {
     const [country, setCountry] = useState('');
     const [age, setAge] = useState('');
     const [height, setHeight] = useState('');
-    
+
 
     const handleUpdate = async (e) => {
         e.preventDefault();
@@ -41,6 +41,12 @@ function UserArea() {
         }
     };
 
+
+    var loadfile = function (e) {
+        var image = document.getElementById("image");
+        image.src = URL.createObjectURL(e.target.files[0])
+    }
+
     return (
         <div className="App">
             <Header />
@@ -50,7 +56,10 @@ function UserArea() {
                 </div>
                 <div className="profile">
                     <div className="user-info">
-                        <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="avatar" />
+                        <label htmlFor="file" id='image-label'>
+                            <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="avatar" id='image' />
+                        </label>
+                        <input type='file' id="file" accept='image/*' onChange={loadfile}/>
                         <h1>Real Name</h1>
                         <h2>Country</h2>
                         <h3>Age</h3>
@@ -65,7 +74,7 @@ function UserArea() {
                             <input type="text" placeholder='Type your country' name="country" required onChange={(e) => setCountry(e.target.value)} />
                             <input type="number" placeholder='Type your age (Optional)' name="age" onChange={(e) => setAge(e.target.value)} />
                             <input type="text" placeholder='Type your height (Optional)' name="height" onChange={(e) => setHeight(e.target.value)} />
-                            <input type="submit" id="btnSend" value="Save Changes" onClick={handleUpdate}/>
+                            <input type="submit" id="btnSend" value="Save Changes" onClick={handleUpdate} />
                         </form>
                     </div>
                 </div>

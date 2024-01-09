@@ -48,6 +48,7 @@ body {
     background: orange;
     color: #424242;
     transition: .5s ease-in-out;
+    color: black;
 }
 
 .btn-buy2 {

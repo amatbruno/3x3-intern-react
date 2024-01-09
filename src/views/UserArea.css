@@ -19,21 +19,63 @@ body {
     margin-top: -170px;
     text-align: center;
 }
+
 .user-info img {
     width: 340px;
+    width: 340px;
+    max-width: none;
     margin-bottom: 40px;
     border-radius: 50%;
     border: 5px solid whitesmoke;
     cursor: pointer;
+    transition: .4s ease-in-out;
+    background: #434343;
 }
+
+#image-label {
+    position: relative;
+    width: 340px;
+    width: 340px;
+    cursor: pointer;
+}
+
 .user-info img:hover {
     border: 5px solid whitesmoke;
-    filter: brightness(0.3);
-    transition: .5s ease-in-out;
+    filter: brightness(0.4);
+    transition: .35s ease-in-out;
+    
 }
-.user-info h1, h2, h3, h4, h5 {
+
+#image-label::after {
+    content: '🖍';
+    width: 20%;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    color: white;
+    letter-spacing: 1.5px;
+    display: none;
+    
+}
+
+#image-label:hover::after {
+    display: block;
+}
+
+#file {
+    display: none;
+}
+
+.user-info h1,
+h2,
+h3,
+h4,
+h5 {
     margin-bottom: 15px;
 }
+
 .user-info h1 {
     border-top: solid orange 1px;
     padding-top: 20px;
@@ -42,24 +84,29 @@ body {
 .fill-data {
     margin: auto;
 }
-.fill-data p { 
+
+.fill-data p {
     font-size: 19px;
     margin-bottom: 30px;
     margin-top: 40px;
 }
+
 .fill-data form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4rem;
     padding-top: 20px;
 }
-.fill-data form input[type=text], .fill-data form input[type=number] {
+
+.fill-data form input[type=text],
+.fill-data form input[type=number] {
     padding: 15px;
     width: 320px;
     font-size: 17px;
     border-radius: .5rem;
     border: none;
 }
+
 .fill-data form input[type=submit] {
     padding: 12px;
     width: 60%;
@@ -72,6 +119,7 @@ body {
     border: 2px solid transparent;
     font-size: 17px;
 }
+
 .fill-data form input[type=submit]:hover {
     background: transparent;
     border: 2px solid orange;
