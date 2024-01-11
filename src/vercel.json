@@ -8,7 +8,7 @@
     ],
     "static": {
         "include": [
-            "/src/assets"
+            "src/assets"
         ]
     }
 }
