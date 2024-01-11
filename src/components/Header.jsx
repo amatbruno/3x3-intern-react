@@ -10,7 +10,7 @@ function Header() {
                 <Link to="/tickets">TICKETS</Link>
                 <Link to="/gallery">GALLERY</Link>
                 <Link to="/contact">CONTACT</Link>
-                <Link to="/login"><img id='login-img' src="/src/assets/login.png" alt="user-log" /></Link>
+                <Link to="/login"><img id='login-img' src="file:///C:/Users/brunoamagar/Documents/GitHub/3x3_intern/src/assets/login.png" alt="user-log" /></Link>
             </nav>
             <Outlet />
         </header>
