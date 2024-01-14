@@ -15,12 +15,8 @@ It's important to understand that possibly exists some code bad practices or des
 - First, Node.js needs to be installed  on your PC, then download the project and intiate it in a splitted console;
   - Type;
   ```html
-<pre>
-    <div class="container">
-            npm install
-            npm run dev
-    </div>
-</pre>
+  npm install
+  npm run dev
   ```
   - And, if you want to test the database, follow this steps a second terminal (I will provide the database connection properly);
     ```html
