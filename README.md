@@ -17,12 +17,8 @@ It's important to understand that possibly exists some code bad practices or des
   ```html
 <pre>
     <div class="container">
-        <div class="block two first">
-            <div class="wrap">
             npm install
             npm run dev
-            </div>
-        </div>
     </div>
 </pre>
   ```
