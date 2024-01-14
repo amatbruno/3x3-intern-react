@@ -15,7 +15,6 @@ It's important to understand that possibly exists some code bad practices or des
 - First, Node.js needs to be installed  on your PC, then download the project and intiate it in a splitted console;
   - Type;
   ```html
-<h2>Example of code</h2>
 <pre>
     <div class="container">
         <div class="block two first">
