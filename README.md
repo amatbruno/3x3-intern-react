@@ -21,17 +21,8 @@ This project has been created with the Vite framework.
   
   - Then, if you want to test the database, follow this steps a second terminal (I will provide the database connection properly);
     ```html
-<h2>Example of code</h2>
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <div class="wrap">
-            cd src/js
-            node index.js
-            </div>
-        </div>
-    </div>
-</pre>
+    cd src/js
+    node index.js
   ```
 
 
