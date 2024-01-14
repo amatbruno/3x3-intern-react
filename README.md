@@ -19,10 +19,10 @@ This project has been created with the Vite framework.
   npm run dev
   ```
   
-  - Then, if you want to test the database, follow this steps a second terminal (I will provide the database connection properly);
-    ```html
-    cd src/js
-    node index.js
+- Then, if you want to test the database, follow this steps a second terminal (I will provide the database connection properly);
+  ```html
+  cd src/js
+  node index.js
   ```
 
 
