@@ -4,11 +4,12 @@ const cors = require("cors");
 const app = express();
 const port = 3001;
 
+//CHANGE PASSWORD
 const pool = new Pool({
-    host: "localhost",
-    user: "superuser",
-    password: "12345",
-    database: "3x3_inside",
+    host: "Your hostname",
+    user: "Your username",
+    password: "Your password",
+    database: "Your DB name",
     port: 5432,
 });
 
@@ -27,9 +28,6 @@ function getRandomID(length) {
     }
     return id;
 }
-
-
-
 function getActualDate() {
     const date = new Date();
     const year = date.getFullYear();
