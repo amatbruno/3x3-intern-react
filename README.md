@@ -26,10 +26,7 @@ This project has been created with the Vite framework.
   node index.js
   ```
   
-```html
-<br>
 Any suggestion or pull request is welcome, thanks for seeing!.
-```
 -----------------------------------------------------------------------------
 
 Currently, two official plugins are available:
