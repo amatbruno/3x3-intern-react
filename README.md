@@ -8,7 +8,8 @@ The 3x3 Intern project is an educational and non-lucrative project where is used
 
 This project has been created with the Vite framework.
 
- It's important to understand that possibly exists some code bad practices or desing fails but is made it 100% to understant how works an entire full-stack webpage.
+ It's important to understand that possibly exists some code bad practices or desing fails but is made it 100% by myself with the objective
+ to understant how works an entire full-stack webpage.
 
 
 1. Running project
