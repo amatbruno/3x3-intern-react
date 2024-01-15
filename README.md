@@ -13,19 +13,28 @@ This project has been created with the Vite framework.
 
 
 1. Running project
-- First, Node.js needs to be installed  on your PC, then download the project and intiate it in a splitted console;
+- First, Node.js needs to be installed  on your PC: https://nodejs.org/en .
+- Then download the project and intiate it in a splitted console;
   - Type;
   ```html
   npm install
   npm run dev
   ```
   
-- Then, if you want to test the database, follow this steps a second terminal (I will provide the database connection properly);
+- Then, if you want to test the database, download the database manager PostgreSQL: https://www.postgresql.org/download/ .
+- Before activation, you need to create the database with the following parameters:
+  ```html
+  - Database name: 3z3_inside
+  - Necessary tables: players, users and incidents
+  ```
+- Now follow this steps in a second terminal;
   - Type;
   ```html
   cd src/js
   node index.js
   ```
+
+  (For the above step, you need to )
   
 Any suggestion or pull request is welcome, thanks for seeing!.
 -----------------------------------------------------------------------------
