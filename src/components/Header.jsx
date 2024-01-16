@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <Link to="/"><img src='/src/assets/logo.png' alt="log" /></Link>
+                <Link to="/"><img id='logo-img' src='https://static.vecteezy.com/system/resources/previews/023/580/002/original/illustration-of-modern-basketball-logo-it-s-for-champion-concept-png.png' alt="log" /></Link>
                 <Link to="/events" >EVENT</Link>
                 <Link to="/tickets">TICKETS</Link>
                 <Link to="/gallery">GALLERY</Link>
