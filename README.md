@@ -34,7 +34,7 @@ This project has been created with the Vite framework.
   node index.js
   ```
 
-  (For the above step, you need to )
+  (For the above last two steps, you need to configure the src/js/index.cjs file with the commented params in configuration section)
   
 Any suggestion or pull request is welcome, thanks for seeing!.
 -----------------------------------------------------------------------------
