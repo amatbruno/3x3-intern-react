@@ -28,8 +28,10 @@ function Login() {
 
             // Compare the hashed input password with the hashed password from the database
             if (hashedInputPassword === hashedPasswordFromDB) {
+                alert('Login successful');
                 console.log('Login successful');
             } else {
+                alert('Incorrect credentials');
                 console.log('Incorrect credentials');
             }
         } catch (error) {

@@ -12,7 +12,7 @@ function EventView() {
         <div className="intro-img-container">
           <h1>ABOUT THE TOURNAMENT</h1>
           <div className="intro-img">
-            <img src="/src/assets/img-about.jpg" alt="img_intro" />
+            <img src="https://cdn.pixabay.com/photo/2022/02/21/17/17/basketball-7027242_1280.jpg" alt="img_intro" />
           </div>
         </div>
 

@@ -193,9 +193,12 @@ function TicketsView() {
                                         <path d="M4138 743 c6 -2 18 -2 25 0 6 3 1 5 -13 5 -14 0 -19 -2 -12 -5z" />
                                     </g>
                                 </svg>
-                                <img src="/src/assets/seats-legend.png"/>
+                                <div className='legend-colors'>
+                                    <strong><p id='legend-red'>Top Ticket</p></strong>
+                                    <strong><p id='legend-blue'>General Ticket</p></strong>
+                                    <strong><p id='legend-pink'>Vip Ticket</p></strong>
+                                </div>
                             </div>
-
                             <button className="btn-pay" onClick={paymentSucces}>SAVE & PAY</button>
                         </div>
                     </div>

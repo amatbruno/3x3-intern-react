@@ -1,3 +1,4 @@
+
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require("cors");
@@ -6,15 +7,17 @@ const port = 3001;
 
 //CHANGE PASSWORD
 const pool = new Pool({
-    host: "Your hostname",
-    user: "Your username",
-    password: "Your password",
-    database: "Your DB name",
+    host: "localhost",
+    user: "superuser",
+    password: "12345",
+    database: "3x3_inside",
     port: 5432,
 });
 
 app.use(express.json()); //Parse JSON requests
 app.use(cors());
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 
 //Random id generator

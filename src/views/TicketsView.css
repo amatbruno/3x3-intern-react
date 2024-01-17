@@ -159,6 +159,28 @@ p {
     display: none;
 }
 
+.legend-colors {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    font-size: 22px;
+    text-align: start;
+    font-weight: 600;
+}
+
+.legend-colors p {
+    padding: 14px;
+}
+
+#legend-red{
+    color: red;
+}
+#legend-blue {
+    color: blue;
+}
+#legend-pink {
+    color: magenta;
+}
 
 .vip,
 .general,
